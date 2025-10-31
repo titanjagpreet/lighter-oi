@@ -1,0 +1,22 @@
+{
+  "name": "lighter-oi",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start:worker": "node src/worker.js",
+    "start:server": "node src/server.js",
+    "start": "concurrently \"npm run start:worker\" \"npm run start:server\""
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.31.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
